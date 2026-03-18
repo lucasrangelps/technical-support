@@ -439,10 +439,10 @@
   // ── STATE ──
   const MESSAGES = {
     local_fechado: (nome) =>
-      `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`;
+      `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`,
     contato_gpon: (nome) => 
       `Olá, meu nome é ${nome}, técnico que instalou a Internet na sua residência, se tiver algum problema operacional pode entrar em contato com o numero abaixo ok
-      IRLENE 31 98659-0894`
+      \nIRLENE 31 98659-0894`
   };
 
   let userName = '';
@@ -486,12 +486,16 @@
   }
 
   // ── TYPE SELECTION ──
-  function selectType(el) {
+ function selectType(el) {
+    // Remove seleção de todos e adiciona no clicado
     document.querySelectorAll('.type-option').forEach(o => o.classList.remove('selected'));
     el.classList.add('selected');
-    selectedType = el.dataset.type;
+    
+    // Pega o valor do data-type ("local_fechado" ou "Contato_Gpon")
+    selectedType = el.getAttribute('data-type');
     refreshMessage();
   }
+
 
   // ── MESSAGE ──
   function refreshMessage() {
