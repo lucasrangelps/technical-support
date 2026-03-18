@@ -398,7 +398,14 @@
           </div>
           <div class="radio"></div>
         </div>
-        <!-- Futuros tipos podem ser adicionados aqui -->
+        <div class="type-option" data-type="Contato_Gpon" onclick="selectType(this)">
+          <div class="type-icon">></div>
+          <div class="type-info">
+            <div class="type-name">Contato Gpon</div>
+            <div class="type-desc">Orientações e contato gpon</div>
+          </div>
+          <div class="radio"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -432,7 +439,10 @@
   // ── STATE ──
   const MESSAGES = {
     local_fechado: (nome) =>
-      `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`
+      `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`;
+    contato_gpon: (nome) => 
+      `Olá, meu nome é ${nome}, técnico que instalou a Internet na sua residência, se tiver algum problema operacional pode entrar em contato com o numero abaixo ok
+      IRLENE 31 98659-0894`
   };
 
   let userName = '';
