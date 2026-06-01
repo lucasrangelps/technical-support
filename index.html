@@ -351,7 +351,7 @@
 <!-- ONBOARDING -->
 <div id="onboarding">
   <div class="onboarding-card">
-    <div class="onboarding-emoji">👋</div>
+    <div class="onboarding-emoji"> </div>
     <div class="onboarding-title">Bem-vindo ao<br><span>ZapTécnico</span></div>
     <p class="onboarding-sub">Para personalizar suas mensagens, qual é o seu nome?</p>
     <div class="onboarding-input-wrap">
@@ -398,6 +398,14 @@
           </div>
           <div class="radio"></div>
         </div>
+        <div class="type-option" data-type="local_fechado_sem_nome" onclick="selectType(this)">
+          <div class="type-icon">></div>
+            <div class="type-info">
+                <div class="type-name">Local fechado (sem nome)</div>
+                <div class="type-desc">Aviso de visita sem identificar</div>
+            </div>
+          <div class="radio"></div>
+        </div>
         <div class="type-option" data-type="contato_gpon" onclick="selectType(this)">
           <div class="type-icon">></div>
           <div class="type-info">
@@ -440,6 +448,8 @@
   const MESSAGES = {
     local_fechado: (nome) =>
       `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`,
+     local_fechado_sem_nome: () =>
+      `Olá, É referente a instalação da internet, tem alguem no local agora?`,
     contato_gpon: (nome) => 
       `Olá, meu nome é ${nome}, técnico que instalou a Internet na sua residência, se tiver algum problema operacional pode entrar em contato com o numero abaixo ok
       \nIRLENE 31 98659-0894`
