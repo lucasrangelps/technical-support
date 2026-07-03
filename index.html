@@ -390,6 +390,7 @@
     <div class="section-label">Tipo de mensagem</div>
     <div class="card">
       <div class="type-grid" id="typeGrid">
+
         <div class="type-option selected" data-type="local_fechado" onclick="selectType(this)">
           <div class="type-icon">></div>
           <div class="type-info">
@@ -398,6 +399,7 @@
           </div>
           <div class="radio"></div>
         </div>
+
         <div class="type-option" data-type="local_fechado_sem_nome" onclick="selectType(this)">
           <div class="type-icon">></div>
             <div class="type-info">
@@ -406,6 +408,7 @@
             </div>
           <div class="radio"></div>
         </div>
+
         <div class="type-option" data-type="contato_gpon" onclick="selectType(this)">
           <div class="type-icon">></div>
           <div class="type-info">
@@ -414,6 +417,16 @@
           </div>
           <div class="radio"></div>
         </div>
+
+        <div class="type-option selected" data-type="local_fechado_retirada" onclick="selectType(this)">
+          <div class="type-icon">></div>
+          <div class="type-info">
+            <div class="type-name">Local fechado (retirada)</div>
+            <div class="type-desc">Aviso de visita retirada</div>
+          </div>
+          <div class="radio"></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -448,11 +461,13 @@
   const MESSAGES = {
     local_fechado: (nome) =>
       `Olá, meu nome é ${nome}, técnico que veio fazer a instalação da Internet na sua residência, tem alguém no local para atender agora?`,
-     local_fechado_sem_nome: () =>
+    local_fechado_sem_nome: () =>
       `Olá, É referente a instalação da internet, tem alguém no local agora?`,
     contato_gpon: (nome) => 
       `Olá, meu nome é ${nome}, técnico que instalou a Internet na sua residência, se tiver algum problema operacional pode entrar em contato com o número abaixo ok
-      \nIRLENE 31 98659-0894 \nROGERIO 31 98888-2472`
+      \nIRLENE 31 98659-0894 \nROGERIO 31 98888-2472`,
+    local_fechado_retirada: () =>
+      `Olá, É referente a retirada do equipamento de internet, tem alguém no local agora?`
   };
 
   let userName = '';
