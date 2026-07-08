@@ -428,6 +428,15 @@
           <div class="radio"></div>
         </div>
 
+        <div class="type-option" data-type="local_fechado_reparo" onclick="selectType(this)">
+          <div class="type-icon">></div>
+          <div class="type-info">
+            <div class="type-name">Local fechado (reparo)</div>
+            <div class="type-desc">Aviso de visita reparo</div>
+          </div>
+          <div class="radio"></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -468,7 +477,9 @@
       `Olá, meu nome é ${nome}, técnico que instalou a Internet na sua residência, se tiver algum problema operacional pode entrar em contato com o número abaixo ok
       \nIRLENE 31 98659-0894 \nROGERIO 31 98888-2472`,
     local_fechado_retirada: () =>
-      `Olá, É referente a retirada do equipamento de internet, tem alguém no local agora?`
+      `Olá, É referente a retirada do equipamento de internet, tem alguém no local agora?`,
+    local_fechado_reparo: () =>
+      `Olá, É referente ao reparo da Internet, tem alguém no local agora?`
   };
 
   let userName = '';
