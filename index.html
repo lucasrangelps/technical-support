@@ -396,7 +396,7 @@
           <div class="type-icon">></div>
           <div class="type-info">
             <div class="type-name">Local fechado</div>
-            <div class="type-desc">Aviso de visita sem atendimento</div>
+            <div class="type-desc">Aviso de visita local fechado</div>
           </div>
           <div class="radio"></div>
         </div>
@@ -405,7 +405,7 @@
           <div class="type-icon">></div>
             <div class="type-info">
                 <div class="type-name">Local fechado (sem nome)</div>
-                <div class="type-desc">Aviso de visita sem identificar</div>
+                <div class="type-desc">Aviso de visita local fechado</div>
             </div>
           <div class="radio"></div>
         </div>
@@ -545,10 +545,8 @@
     toast('Mensagem restaurada ✓');
   }
 
-  // Update message when user edits textarea (name chip click resets)
-  // Auto-refresh on name change handled in initApp
 
-  // ── PHONE FORMAT ──
+  // ── FORMATAÇÃO TELEFONE
   function formatPhone(input) {
     let v = input.value.replace(/\D/g, '');
     if (v.length > 11) v = v.slice(0, 11);
